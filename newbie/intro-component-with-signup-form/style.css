@@ -1,0 +1,165 @@
+:root {
+  --clr-red: hsl(0, 100%, 74%);
+  --clr-green: hsl(154, 59%, 51%);
+
+  --clr-accent: hsl(248, 32%, 49%);
+
+  --clr-darkblue: hsl(249, 10%, 26%);
+  --clr-grayblue: hsl(246, 25%, 77%);
+
+  --ff-font: "Poppins", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background-image: url(images/bg-intro-mobile.png);
+  background-color: var(--clr-red);
+  color: #fff;
+  font-family: var(--ff-font);
+  text-align: center;
+  padding: 2em 1em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container__head {
+  margin-bottom: 3rem;
+}
+
+.container__title {
+  padding: 2rem 0 1rem 0;
+}
+
+.container__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container__card {
+  background: var(--clr-accent);
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.container__form {
+  background: #fff;
+  color: var(--clr-grayblue);
+  padding: 1em;
+  box-shadow: 0 8px rgba(0, 0, 0, 0.15);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border-radius: 10px;
+}
+
+.form-info {
+  font-size: 0.6rem;
+}
+
+input {
+  font-family: var(--ff-font);
+  font-weight: 600;
+  width: 100%;
+  padding: 1em;
+  border: 1px solid var(--clr-grayblue);
+  border-radius: 5px;
+}
+
+.form__submit-btn {
+  font-family: var(--ff-font);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: var(--clr-green);
+  color: #fff;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 5px;
+}
+
+form p {
+  font-size: 0.75rem;
+  padding: 0 1em;
+}
+
+.terms {
+  color: var(--clr-red);
+  font-weight: 700;
+}
+
+@media (min-width: 800px) {
+  body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 60rem;
+  }
+
+  .container__head {
+    width: 45%;
+    align-self: center;
+    text-align: left;
+  }
+
+  .container__title {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .container__main {
+    width: 50%;
+  }
+
+  .container__form {
+    padding: 1.5rem;
+    width: 100%;
+  }
+}
+
+.input-control.error input {
+  color: var(--clr-red);
+  border: 1px solid var(--clr-red);
+}
+
+.input-control .error {
+  color: var(--clr-red);
+  text-align: right;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+  font-style: italic;
+  margin-top: 0.2rem;
+}
