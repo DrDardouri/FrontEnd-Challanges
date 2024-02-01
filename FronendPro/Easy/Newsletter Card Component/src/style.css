@@ -1,0 +1,138 @@
+:root {
+  --clr-primary-900: #111827;
+  --clr-primary-400: #374151;
+  --clr-primary-100: #b3b8d8;
+
+  --cr-white: #fff;
+  --clr-white-bg: #fafafa;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* write your CSS here */
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: rgba(179, 184, 216, 0.247);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card {
+  max-width: 66rem;
+  background: var(--cr-white);
+  padding: 4rem 6rem;
+  border-radius: 1.5rem;
+  text-align: center;
+}
+
+.card__title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.card p {
+  font-size: 1.45rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+label {
+  display: block;
+}
+
+.form {
+  max-width: 46rem;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  /* border: 1px solid black; */
+}
+
+.form__input {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.form__email-input {
+  padding: 1.3rem 1rem;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  background: #fafafa;
+  border-color: #b3b8d8;
+  border-radius: 10px;
+}
+
+.form__email-input::placeholder {
+  color: var(--clr-primary-100);
+  opacity: 0.7;
+}
+
+.form__submit-btn {
+  display: inline-block;
+  /* width: 35%; */
+  padding: 1.3rem 2.5rem;
+  background: var(--clr-primary-900);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--cr-white);
+  border-radius: 10px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 400ms;
+}
+
+.form__submit-btn:is(:hover, :focus) {
+  transform: scale(1.05);
+}
+
+small {
+  color: rgb(255, 103, 103);
+  margin-bottom: 1rem;
+}
+
+.form__consent {
+  font-size: 1rem;
+  padding: 0 1rem;
+}
+
+.form__consent input {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 850px) {
+  body {
+    padding: 2rem 1rem;
+  }
+
+  .card {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .form__input {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  html {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .form__email-input::placeholder {
+    font-size: 1.1rem;
+  }
+}

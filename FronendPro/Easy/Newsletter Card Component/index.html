@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>Newsletter Card Component - FrontendPro Challenge</title>
+  </head>
+  <body>
+    <div class="card">
+      <h2 class="card__title">Level Up Your Frontend Skills</h2>
+      <p>Sign up for our free newsletter to receive weekly coding challenges that will help you improve your frontend development skills.</p>
+      <form action="#" class="form" id="form">
+        <div class="form-control">
+          <label for="email"></label>
+
+          <div class="form__input">
+            <input class="form__email-input" type="email" name="email" id="email" placeholder="Enter your email address" />
+            <button class="form__submit-btn" type="submit">Subscribe</button>
+          </div>
+          <small class="error-msg"></small>
+        </div>
+
+        <label class="form__consent" for="consent"> <input type="checkbox" id="consent" name="consent" /> By checking this box, you agree to recive our weekly newsletter containing codding challanges, tips, and other related content. You may unsubscribe from the news letter at any time</label>
+      </form>
+    </div>
+
+    <script src="/src/script.js"></script>
+  </body>
+</html>
