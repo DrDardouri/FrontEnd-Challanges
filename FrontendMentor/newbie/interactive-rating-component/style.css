@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+    --clr-primary: hsl(25, 97%, 53%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(217, 12%, 63%);
+    --clr-neutral-300: hsl(216, 12%, 54%);
+    --clr-neutral-600: hsl(213, 20%, 23%);
+    --clr-neutral-700: hsl(213, 20%, 22%);
+    --clr-neutral-800: hsl(213, 19%, 18%);
+    --clr-neutral-900: hsl(216, 12%, 8%);
+
+    --fs-base: 15px;
+    --ff-base: "Overpass", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    font-family: var(--ff-base);
+    font-size: var(--fs-base);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: var(--clr-neutral-900);
+    color: var(--clr-neutral-200);
+    line-height: 1.6;
+}
+
+.hidden {
+    scale: 0;
+}
+
+.card {
+    background-image: linear-gradient(to bottom left, var(--clr-neutral-600), var(--clr-neutral-800));
+    padding: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 400px;
+}
+
+.star-bubble {
+    background-color: var(--clr-neutral-700);
+    width: fit-content;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__title {
+    color: var(--clr-neutral-100);
+    font-size: 1.7rem;
+}
+
+.card__ratings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rating {
+    background-color: var(--clr-neutral-700);
+    color: var(--clr-neutral-100);
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.rating:is(:hover, :focus) {
+    background-color: var(--clr-primary);
+    color: var(--clr-neutral-100);
+}
+
+.card__btn {
+    background-color: var(--clr-primary);
+    color: var(--clr-neutral-100);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    height: 3rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.card__btn:is(:hover, :focus) {
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-primary);
+}
+
+.card-after {
+    text-align: center;
+}
+
+.card-after img {
+    scale: 0.5;
+}
