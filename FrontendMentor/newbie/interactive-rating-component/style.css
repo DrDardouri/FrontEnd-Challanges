@@ -34,6 +34,7 @@ body {
     background-color: var(--clr-neutral-900);
     color: var(--clr-neutral-200);
     line-height: 1.6;
+    padding: 3rem 1rem;
 }
 
 .hidden {
@@ -46,15 +47,15 @@ body {
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    max-width: 400px;
+    gap: 1.5rem;
+    max-width: 23rem;
 }
 
 .star-bubble {
     background-color: var(--clr-neutral-700);
     width: fit-content;
-    height: 3rem;
-    width: 3rem;
+    width: 10%;
+    height: auto;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -64,13 +65,14 @@ body {
 .card__title {
     color: var(--clr-neutral-100);
     font-size: 1.7rem;
+    margin-bottom: 0.5rem;
 }
 
 .card__ratings {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    /* gap: 1rem; */
 }
 
 .rating {
@@ -83,13 +85,16 @@ body {
     align-items: center;
     border-radius: 50%;
     cursor: pointer;
+    transition: all 500ms;
+    scale: 1;
 }
 
-.rating:is(:hover, :focus) {
+.rating:is(:hover, :focus),
+.selected {
     background-color: var(--clr-primary);
     color: var(--clr-neutral-100);
+    scale: 1.05;
 }
-
 .card__btn {
     background-color: var(--clr-primary);
     color: var(--clr-neutral-100);
@@ -100,17 +105,31 @@ body {
     border: none;
     border-radius: 2rem;
     cursor: pointer;
+    transition: 400ms;
 }
 
 .card__btn:is(:hover, :focus) {
     background-color: var(--clr-neutral-100);
     color: var(--clr-primary);
+    scale: 1.01;
 }
 
 .card-after {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .card-after img {
-    scale: 0.5;
+    width: 55%;
+    height: auto;
+}
+
+.card-after--msg {
+    background-color: var(--clr-neutral-600);
+    color: var(--clr-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
 }

@@ -6,6 +6,8 @@ let ratingVal = 0;
 
 ratings.forEach((rating) => {
     rating.addEventListener("click", function () {
+        ratings.forEach((rating) => rating.classList.remove("selected"));
+        rating.classList.add("selected");
         ratingVal = rating.innerHTML;
         console.log(ratingVal);
     });
@@ -20,8 +22,10 @@ function renderResult() {
     <p class="card-after--msg">
         You selected ${ratingVal} out of 5
     </p>
+    <div>
     <p class="card__title">Thank you!</p>
     <p class="card__body">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+    </div>
     </div>
 `;
     container.innerHTML = html;
