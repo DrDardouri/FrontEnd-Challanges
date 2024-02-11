@@ -1,0 +1,182 @@
+/*
+=============== 
+Google Fonts
+===============
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+    --clr-primary: hsl(4, 100%, 67%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(231, 7%, 60%);
+    --clr-neutral-600: hsl(235, 18%, 26%);
+    --clr-neutral-700: hsl(234, 29%, 20%);
+
+    --ff-base: "Roboto", sans-serif;
+    --fs-base: 1rem;
+}
+
+/*
+=============== 
+css reset
+===============
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/*
+=============== 
+css
+===============
+*/
+
+body {
+    color: var(--clr-neutral-700);
+    font-family: var(--ff-base);
+    font-size: var(--fs-base);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-left {
+    padding: 1.5rem;
+    padding-bottom: 2rem;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.card-right {
+    background-image: url(assets/images/illustration-sign-up-mobile.svg);
+    background-size: 100vw;
+    height: 80vw;
+    background-repeat: no-repeat;
+    order: -1;
+}
+
+.card__title {
+    color: var(--clr-neutral-700);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.card__subtitle {
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+ul img {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.card__form label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--clr-neutral-700);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.card__form input {
+    font-family: inherit;
+    padding: 1rem;
+    border-color: hsl(231, 7%, 60%, 0.2);
+    outline: 0;
+    border-radius: 0.5rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.card__form input::placeholder {
+    color: hsl(231, 7%, 60%, 0.7);
+}
+
+.form__submit-btn {
+    font-family: inherit;
+    color: var(--clr-neutral-100);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    background-color: var(--clr-neutral-700);
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+@media (min-width: 850px) {
+    body {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        min-height: 100vh;
+        display: grid;
+        place-content: center;
+        background-color: var(--clr-neutral-700);
+    }
+
+    .card {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--clr-neutral-100);
+        padding: 1.5em;
+        border-radius: 2.5em;
+        gap: 2rem;
+    }
+    .card-left {
+        order: -1;
+    }
+
+    .card-right {
+        background-image: url(assets/images/illustration-sign-up-desktop.svg);
+        background-size: cover;
+        min-width: 400px;
+        width: 400px;
+        min-height: 593px;
+        height: 593px;
+        background-repeat: no-repeat;
+    }
+
+    .card__title {
+        font-size: 2.8rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .card__title {
+        font-size: 3.5rem;
+    }
+}
