@@ -54,8 +54,8 @@ body {
 .star-bubble {
     background-color: var(--clr-neutral-700);
     width: fit-content;
-    width: 10%;
-    height: auto;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
