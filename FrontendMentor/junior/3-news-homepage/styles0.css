@@ -25,7 +25,7 @@ variables
 
     --ff-base: "Inter", sans-serif;
 
-    --transition: all 0.2s linear;
+    --transition: all 0.3s linear;
 }
 
 /*
@@ -63,7 +63,7 @@ a:is(:focus, :hover) {
 
 /*
 =============== 
-CSS
+General css
 ===============
 */
 
@@ -75,9 +75,18 @@ body {
     padding: 0 1rem 5rem 1rem;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
 header {
     padding: 2rem 0;
 }
+
+/* navigation */
 
 .nav-header {
     user-select: none;
@@ -86,8 +95,7 @@ header {
     justify-content: space-between;
 }
 
-.open-nav-btn,
-.close-nav-btn {
+.nav-toggle {
     user-select: none;
     background: transparent;
     border-color: transparent;
@@ -95,89 +103,22 @@ header {
     cursor: pointer;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
-}
-
-/*
-/////////////////////////////////
-    Active Mobile Navigation
-/////////////////////////////////
-*/
-
-.active-body {
-    overflow: hidden;
-}
-
-.active-body .nav {
-    position: fixed;
-    height: 100vh;
-    width: 30vw;
-    top: 0;
-    right: 70vw;
-    background-color: rgb(0, 0, 26, 0.4);
-    transition: var(--transition);
-}
-
-.active-body .navigation {
-    position: fixed;
-
-    background-color: var(--clr-neutral-100);
-    height: 100vh;
-    width: 70vw;
-    top: 0;
-    right: 0;
-    transition: all 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-
-    z-index: 2;
-    transition: var(--transition);
-}
-
 .links {
-    display: none;
+    user-select: none;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
 }
 
-.active-body .links {
-    /* visibility: hidden; */
-    /* transform: translateX(100%); */
-    /* opacity: 0; */
-
-    display: initial;
-    color: var(--clr-neutral-700);
-    font-size: 1.1rem;
-    font-weight: 500;
-    padding: 2rem;
-    margin-top: 20vh;
-    /* orgnazation of the list */
-    display: flex;
+.show-links {
+    height: 8rem;
+    width: auto;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 1rem;
+    text-align: right;
 }
 
-.close-nav-btn {
-    display: none;
-}
-
-.active-body .close-nav-btn {
-    display: initial;
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-}
-
-/*
-=============== 
-    Intro Section
-===============
-*/
-
+/* intro section */
 .intro-section__img {
     margin-bottom: 2rem;
 }
@@ -211,12 +152,7 @@ main {
     color: var(--clr-neutral-100);
 }
 
-/*
-============================== 
-    Aside Section
-============================== 
-*/
-
+/* aside section */
 aside {
     background-color: var(--clr-neutral-700);
     color: var(--clr-neutral-400);
@@ -250,12 +186,7 @@ aside div:last-child {
     margin-bottom: 0;
 }
 
-/*
-============================================= 
-    Articles Section
-============================================= 
-*/
-
+/* articles section */
 .articles-section {
     display: flex;
     flex-direction: column;
@@ -289,9 +220,9 @@ aside div:last-child {
 }
 
 /*
-============================================================
-media Queries: SCREEN SIZE OVER 800px
-============================================================
+===============
+media Queries
+===============
 */
 
 @media (min-width: 800px) {
@@ -309,15 +240,14 @@ media Queries: SCREEN SIZE OVER 800px
         margin: 0 auto;
     }
 
-    /* ========= navigation ========= */
-    .open-nav-btn {
+    /* navigation */
+    .nav-toggle {
         display: none;
     }
 
     .navbar {
         display: flex;
         justify-content: space-between;
-        font-size: 1.3rem;
     }
 
     .links {
@@ -333,7 +263,6 @@ media Queries: SCREEN SIZE OVER 800px
         margin-left: 1rem;
     }
 
-    /* ================== main layout ================== */
     main {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -367,14 +296,13 @@ media Queries: SCREEN SIZE OVER 800px
         width: 50%;
     }
 
-    /* =========================== aside =========================== */
     aside {
         grid-area: aside;
         padding: 2em 1.5rem;
         max-width: 24rem;
     }
 
-    /* ==================================== articles =========================== */
+    /* articles */
     .articles-section {
         grid-area: articles;
         flex-direction: row;

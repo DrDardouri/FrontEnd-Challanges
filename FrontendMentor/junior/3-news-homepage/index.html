@@ -11,24 +11,29 @@
 
         <title>Frontend Mentor | News homepage</title>
     </head>
-    <body>
+    <body class="body">
         <header class="container navbar">
             <div class="nav-header">
                 <img src="assets/images/logo.svg" alt="logo" />
-                <button class="nav-toggle">
+                <button class="open-nav-btn">
                     <img src="assets/images/icon-menu.svg" alt="icon-menu" />
                 </button>
             </div>
 
-            <nav class="navigation">
-                <ul class="links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">New</a></li>
-                    <li><a href="#">Popular</a></li>
-                    <li><a href="#">Trending</a></li>
-                    <li><a href="#">Categories</a></li>
-                </ul>
-            </nav>
+            <div class="nav">
+                <nav class="navigation">
+                    <button class="close-nav-btn">
+                        <img src="assets/images/icon-menu-close.svg" alt="icon-menu-close" />
+                    </button>
+                    <ul class="links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">New</a></li>
+                        <li><a href="#">Popular</a></li>
+                        <li><a href="#">Trending</a></li>
+                        <li><a href="#">Categories</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <main class="container">
