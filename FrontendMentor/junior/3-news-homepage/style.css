@@ -42,7 +42,7 @@ css reset
 img {
     max-width: 100%;
     display: block;
-    height: auto;
+    /* height: auto; */
     user-select: none;
 }
 
@@ -294,7 +294,7 @@ media Queries: SCREEN SIZE OVER 800px
 ============================================================
 */
 
-@media (min-width: 800px) {
+@media (min-width: 850px) {
     body {
         font-size: 1rem;
     }
@@ -317,7 +317,7 @@ media Queries: SCREEN SIZE OVER 800px
     .navbar {
         display: flex;
         justify-content: space-between;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .links {
@@ -348,9 +348,60 @@ media Queries: SCREEN SIZE OVER 800px
 
     .intro-section {
         grid-area: intro;
-        margin-right: 2rem;
     }
 
+    .intro-section__title {
+        font-size: 5rem;
+    }
+
+    /* =========================== aside =========================== */
+    aside {
+        grid-area: aside;
+        padding: 2em 1.5rem;
+        max-width: 24rem;
+        margin-left: 2rem;
+    }
+
+    /* ==================================== articles =========================== */
+    .articles-section {
+        grid-area: articles;
+        /* flex-direction: row; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "art1 art2 art3";
+        gap: 0;
+    }
+
+    .art1,
+    .art2 {
+        padding-right: 1rem;
+        /* width: max-content; */
+        max-width: 24rem;
+    }
+
+    .art1 {
+        grid-area: art1;
+    }
+
+    .art2 {
+        grid-area: art2;
+    }
+
+    .art3 {
+        grid-area: art3;
+        /* width: max-content; */
+        margin-left: 2rem;
+        max-width: 22rem;
+    }
+    .article__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1000px) {
     .intro-section__body {
         display: flex;
         gap: 0;
@@ -365,25 +416,5 @@ media Queries: SCREEN SIZE OVER 800px
 
     .intro-section__body div {
         width: 50%;
-    }
-
-    /* =========================== aside =========================== */
-    aside {
-        grid-area: aside;
-        padding: 2em 1.5rem;
-        max-width: 24rem;
-    }
-
-    /* ==================================== articles =========================== */
-    .articles-section {
-        grid-area: articles;
-        flex-direction: row;
-        gap: 0;
-    }
-
-    .article__body {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
     }
 }
