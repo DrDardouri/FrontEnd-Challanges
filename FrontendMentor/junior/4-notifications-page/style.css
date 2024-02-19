@@ -83,6 +83,12 @@ body {
     padding-top: 0;
 }
 
+/*
+=============== 
+    Notification header
+===============
+*/
+
 .notifications__header {
     display: flex;
     justify-content: space-between;
@@ -115,6 +121,12 @@ body {
     color: var(--clr-primary-b);
     font-weight: 500;
 }
+
+/*
+============================== 
+    Notification body
+==============================
+*/
 
 .notifications__main {
     display: flex;
@@ -194,13 +206,19 @@ body {
     font-weight: 800;
 }
 
+/*
+============================================= 
+    Media query
+=============================================
+*/
+
 @media (min-width: 500px) {
     body {
         background-color: var(--clr-neutral-300);
         min-height: 100vh;
         display: grid;
         place-content: center;
-        margin: 4rem 0;
+        margin: 2rem 0;
     }
 
     .container {
