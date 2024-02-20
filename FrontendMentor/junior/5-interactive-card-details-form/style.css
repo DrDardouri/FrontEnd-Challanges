@@ -1,0 +1,159 @@
+/*
+=============== 
+Google Fonts
+===============
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+/*
+=============== 
+variables 
+===============
+*/
+
+:root {
+    --clr-primary-r: hsl(0, 100%, 66%);
+    --clr-primary-gradien-100: hsl(249, 99%, 64%);
+    --clr-primary-gradien-100: hsl(278, 94%, 30%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(270, 3%, 87%);
+    --clr-neutral-300: hsl(279, 6%, 55%);
+    --clr-neutral-400: hsl(278, 68%, 11%);
+
+    --ff-base: "Space Grotesk", sans-serif;
+    --fs-base: 1.125rem;
+
+    --transition: all 0.2s linear;
+}
+
+/*
+=============== 
+css reset
+===============
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    /* height: auto; */
+    user-select: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/*
+=============== 
+CSS
+===============
+*/
+
+body {
+    font-family: var(--ff-base);
+    /* font-size: var(--fs-base); */
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.bg {
+    height: 30vh;
+    width: 100vw;
+    background-image: url(images/bg-main-mobile.png);
+    background-size: cover;
+}
+
+.creditcard-front,
+.creditcard-front {
+    height: 122px;
+    width: 223px;
+    background-size: cover;
+}
+
+.creditcard-front {
+    background-image: url(images/bg-card-front.png);
+    position: absolute;
+    left: 1.5rem;
+}
+
+.creditcard-back {
+    background-image: url(images/bg-card-back.png);
+}
+
+.form {
+    height: 70vh;
+    width: 100vw;
+    padding: 1.5rem;
+    margin-top: 5rem;
+}
+
+label {
+    color: var(--clr-neutral-400);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    display: block;
+}
+
+.creditcard-form {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto;
+    gap: 1rem;
+    grid-template-areas:
+        "cardholder-name    cardholder-name"
+        "card-number            card-number"
+        "exp-date__inputs              cvc"
+        "button                     button";
+}
+
+input {
+    width: 100%;
+    font-family: inherit;
+    padding: 0.75rem;
+    border: 1px solid var(--clr-neutral-200);
+    border-radius: 0.3rem;
+}
+
+.creditcard-form__cardholder-name {
+    grid-area: cardholder-name;
+}
+
+.creditcard-form__card-number {
+    grid-area: card-number;
+}
+
+.creditcard-form__exp-date-inputs {
+    grid-area: exp-date__inputs;
+    display: flex;
+    flex-direction: column;
+}
+
+.exp-date__inputs {
+    display: flex;
+}
+
+.creditcard-form__cvc-inputs {
+    grid-area: cvc;
+}
+
+.creditcard-form__button {
+    grid-area: button;
+    color: var(--clr-neutral-100);
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid var(--clr-neutral-400);
+    border-radius: 0.3rem;
+    background-color: var(--clr-neutral-400);
+    padding: 0.75rem;
+}
