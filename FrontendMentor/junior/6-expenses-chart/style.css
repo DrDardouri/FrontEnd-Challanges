@@ -1,0 +1,279 @@
+/*
+=============== 
+Google Fonts
+===============
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+/*
+=============== 
+variables 
+===============
+*/
+
+:root {
+    --clr-primary-red: hsl(10, 79%, 65%);
+    --clr-primary-cyan: hsl(186, 34%, 60%);
+
+    --clr-neutral-100: hsl(33, 100%, 98%);
+
+    --clr-neutral-400: hsl(27, 66%, 92%);
+    --clr-neutral-500: hsl(28, 10%, 53%);
+
+    --clr-neutral-700: hsl(25, 47%, 15%);
+
+    --ff-base: "DM Sans", sans-serif;
+
+    --transition: all 0.2s linear;
+}
+
+/*
+=============== 
+css reset
+===============
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    display: block;
+    /* height: auto; */
+    user-select: none;
+}
+
+/*
+=============== 
+    main css
+===============
+*/
+
+body {
+    font-family: var(--ff-base);
+    font-size: 1.125rem;
+    padding: 4rem 1rem;
+    background-color: var(--clr-neutral-400);
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+}
+/*
+============================== 
+    Card Head
+==============================
+*/
+
+.card__head {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem;
+    background-color: var(--clr-primary-red);
+    border-radius: 0.75rem;
+    color: var(--clr-neutral-100);
+}
+
+.card__head-text {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 0.4rem;
+}
+
+.card__head-balance {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.card__head span {
+    display: block;
+}
+
+/*
+============================================= 
+    Card Body
+=============================================
+*/
+
+.card__body {
+    padding: 1.75rem 1.25rem;
+    border-radius: 0.75rem;
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-neutral-500);
+}
+
+.card__body h2,
+.month-stats__balance {
+    color: var(--clr-neutral-700);
+}
+
+.card__body h2 {
+    margin-bottom: 1rem;
+}
+
+.week-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0.5rem;
+    height: 250px;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--clr-neutral-500);
+    margin-bottom: 1.5rem;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip::before {
+    content: attr(data-text);
+    position: absolute;
+    /* position */
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* style of the tooltip */
+    width: fit-content;
+    padding: 3px;
+    border-radius: 4px;
+    background-color: var(--clr-neutral-700);
+    color: var(--clr-neutral-100);
+    font-size: 12px;
+    font-weight: 500;
+
+    text-align: center;
+
+    /* hide by default */
+    display: none;
+}
+
+.tooltip:hover:before {
+    display: block;
+}
+
+.stat {
+    height: 75px;
+    width: 35px;
+    background-color: var(--clr-primary-red);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.stat:is(:hover, :focus) {
+    background-color: hsl(10, 79%, 65%, 0.5);
+}
+
+.mon {
+    height: 50px;
+}
+
+.tue {
+    height: 100px;
+}
+
+.thu {
+    height: 90px;
+}
+
+.fri {
+    height: 80px;
+}
+
+.sat {
+    height: 120px;
+}
+
+.wed {
+    height: 140px;
+    background-color: var(--clr-primary-cyan);
+}
+
+.wed:is(:hover, :focus) {
+    background-color: hsl(186, 34%, 60%, 0.5);
+}
+
+.week-stats {
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+/*
+============================================= 
+    Card Footer
+=============================================
+*/
+
+.month-stats__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--clr-neutral-700);
+}
+
+.percent {
+    color: var(--clr-neutral-700);
+    font-weight: 700;
+}
+
+.right {
+    text-align: right;
+}
+
+@media (max-width: 300px) {
+    .stat {
+        width: 20px;
+    }
+}
+
+@media (min-width: 700px) {
+    body {
+        padding: 0;
+    }
+
+    .card {
+        max-width: 650px;
+        width: 400px;
+    }
+
+    .stat {
+        width: 40px;
+    }
+
+    .tooltip::before {
+        font-size: 16px;
+        padding: 7px;
+        top: -45px;
+    }
+}
+
+@media (min-width: 900px) {
+    .card {
+        max-width: 900px;
+        width: 500px;
+    }
+
+    .card__body {
+        padding: 2rem 2.25rem;
+    }
+
+    .stat {
+        width: 50px;
+    }
+}

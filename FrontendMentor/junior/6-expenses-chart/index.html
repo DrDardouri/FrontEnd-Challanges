@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+        <title>Frontend Mentor | Expenses chart component</title>
+
+        <link rel="stylesheet" href="style.css" />
+
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    </head>
+    <body>
+        <main class="card">
+            <div class="card__head">
+                <div>
+                    <span class="card__head-text">My balance</span>
+                    <span class="card__head-balance">$921.48</span>
+                </div>
+                <img class="card__head-logo" src="images/logo.svg" alt="" />
+            </div>
+            <div class="card__body">
+                <h2>Spending - Last 7 days</h2>
+                <div class="week-stats">
+                    <div>
+                        <div class="stat mon tooltip" data-text="$20.00"></div>
+                        <p>mon</p>
+                    </div>
+                    <div>
+                        <div class="stat tue tooltip" data-text="$35.00"></div>
+                        <p>tue</p>
+                    </div>
+                    <div>
+                        <div class="stat wed tooltip" data-text="$52.36"></div>
+                        <p>wed</p>
+                    </div>
+                    <div>
+                        <div class="stat thu tooltip" data-text="$31.07"></div>
+                        <p>thu</p>
+                    </div>
+                    <div>
+                        <div class="stat fri tooltip" data-text="$30.00"></div>
+                        <p>fri</p>
+                    </div>
+                    <div>
+                        <div class="stat sat tooltip" data-text="$49.00"></div>
+                        <p>sat</p>
+                    </div>
+                    <div>
+                        <div class="stat sun tooltip" data-text="$28.00"></div>
+                        <p>sun</p>
+                    </div>
+                </div>
+                <!-- week stat END -->
+
+                <div class="month-stats">
+                    <p class="month-stats__title">Total this month</p>
+                    <div class="month-stats__body">
+                        <div class="left">$478.33</div>
+                        <div class="right">
+                            <span class="percent">+2.4%</span>
+                            <br />
+                            <span>from last month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
