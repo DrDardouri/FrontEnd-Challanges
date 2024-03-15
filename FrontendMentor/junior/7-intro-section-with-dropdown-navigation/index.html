@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Frontend Challange" />
+        <meta name="author" content="Dr. Dardouri" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+        <title>Frontend Mentor | Intro section with dropdown navigation</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="body">
+        <header class="header">
+            <div class="header-mobile header-desktop">
+                <img src="images/logo.svg" alt="logo" class="logo" id="logo" />
+                <button class="open-nav-btn">
+                    <img src="images/icon-menu.svg" alt="open-menu-icon" />
+                </button>
+            </div>
+
+            <nav class="nav">
+                <div class="navigation">
+                    <button class="close-nav-btn">
+                        <img src="images/icon-close-menu.svg" alt="close-menu-icon" />
+                    </button>
+
+                    <ul class="nav__links">
+                        <li class="nav__item">
+                            <button class="features-btn">
+                                Features
+                                <img src="images/icon-arrow-down.svg" alt="" />
+                            </button>
+                            <ul class="dropdown-navigation">
+                                <li class="dropdown-navigation__item">
+                                    <img src="images/icon-todo.svg" alt="icon-todo" />
+                                    Todo List
+                                </li>
+                                <li class="dropdown-navigation__item">
+                                    <img src="images/icon-calendar.svg" alt="icon-calendar" />
+                                    Calendar
+                                </li>
+                                <li class="dropdown-navigation__item">
+                                    <img src="images/icon-reminders.svg" alt="icon-reminders" />
+                                    Reminders
+                                </li>
+                                <li class="dropdown-navigation__item">
+                                    <img src="images/icon-planning.svg" alt="icon-planning" />
+                                    Planning
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item company">
+                            <button class="company-btn">
+                                Company
+                                <img src="images/icon-arrow-down.svg" alt="" />
+                            </button>
+                            <ul class="dropdown-navigation">
+                                <li class="dropdown-navigation__item">History</li>
+                                <li class="dropdown-navigation__item">Our Team</li>
+                                <li class="dropdown-navigation__item">Blog</li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#">Careers</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__login-register">
+                        <button class="login-btn">Login</button>
+                        <button class="register-btn">Register</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="desktop-layout">
+            <picture>
+                <source srcset="images/image-hero-desktop.png" media="(min-width: 600px)" />
+                <img src="images/image-hero-mobile.png" alt="" class="main__hero-img" />
+            </picture>
+            <main role="main" class="main">
+                <h1 class="main__title"><span>Make</span> remote work</h1>
+
+                <p class="main__description">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+
+                <a href="#" class="learn-more-btn">Learn more</a>
+                <div class="main__clients-logos">
+                    <img src="images/client-databiz.svg" alt="client-databiz" />
+                    <img src="images/client-audiophile.svg" alt="client-audiophile" />
+                    <img src="images/client-meet.svg" alt="client-meet" />
+                    <img src="images/client-maker.svg" alt="client-maker" />
+                </div>
+            </main>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
