@@ -12,6 +12,8 @@ Du: Die Herausforderung besteht darin, diesen Einführungsbereich mit Dropdown-N
 -   CSS
 -   Vanilla JS
 
+Live Site: https://landing-with-dropdown-nav-drdarouri.netlify.app/
+
 ![Design preview for the Intro section with dropdown navigation coding challenge](./design/desktop-preview.jpg)
 
 # Style guide
