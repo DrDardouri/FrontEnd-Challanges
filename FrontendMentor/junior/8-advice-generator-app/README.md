@@ -1,5 +1,7 @@
 # Frontend Mentor - Advice generator app
 
+live site: https://advice-gen-app-drdardouri.netlify.app/
+
 En: The challenge is to build this Advice App Generator with the implementation of an API and make it look as close to the layout as possible.
 
 Ru: Задача состоит в том, чтобы создать это приложение "генератор советов" с реализацией API и сделать его максимально приближенным к макету.
