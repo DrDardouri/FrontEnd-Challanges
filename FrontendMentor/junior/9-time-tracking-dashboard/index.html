@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="Dr. Dardouri" />
+        <meta name="description" content="Frontend Mentor Challange: Time Tracking Dashboard" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <title>Frontend Mentor | Time tracking dashboard</title>
+        <script defer src="script.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    </head>
+    <body>
+        <main class="dashboard">
+            <div class="dashboard__main">
+                <header class="dashboard__main__header">
+                    <img class="avatar-img" src="images/image-jeremy.png" alt="" />
+                    <div>
+                        <span class="small-text">Report for</span>
+                        <p class="user-name">Jeremy Robson</p>
+                    </div>
+                </header>
+                <div class="dashboard__main__buttons">
+                    <button class="btn" id="daily-btn">Daily</button>
+                    <button class="btn" id="weekly-btn" autofocus>Weekly</button>
+                    <button class="btn" id="monthly-btn">Monthly</button>
+                </div>
+            </div>
+
+            <div class="dashboard__work db">
+                <section class="dashboard-data" id="work">
+                    <header>
+                        <span>Work</span>
+                        <button><img src="images/icon-ellipsis.svg" alt="icon-ellipsis" /></button>
+                    </header>
+                    <main>
+                        <span class="dashboard-data__current">32hrs</span>
+                        <span class="dashboard-data__previous">Last Week - 30hrs</span>
+                    </main>
+                </section>
+            </div>
+
+            <div class="dashboard__play db">
+                <section class="dashboard-data" id="play">
+                    <header>
+                        <span>Play</span>
+                        <button><img src="images/icon-ellipsis.svg" alt="icon-ellipsis" /></button>
+                    </header>
+                    <main>
+                        <span class="dashboard-data__current">32hrs</span>
+                        <span class="dashboard-data__previous">Last Week - 30hrs</span>
+                    </main>
+                </section>
+            </div>
+
+            <div class="dashboard__study db">
+                <section class="dashboard-data" id="study">
+                    <header>
+                        <span>Study</span>
+                        <button><img src="images/icon-ellipsis.svg" alt="icon-ellipsis" /></button>
+                    </header>
+                    <main>
+                        <span class="dashboard-data__current">32hrs</span>
+                        <span class="dashboard-data__previous">Last Week - 30hrs</span>
+                    </main>
+                </section>
+            </div>
+
+            <div class="dashboard__exercise db">
+                <section class="dashboard-data" id="exercise">
+                    <header>
+                        <span>Exercise</span>
+                        <button><img src="images/icon-ellipsis.svg" alt="icon-ellipsis" /></button>
+                    </header>
+                    <main>
+                        <span class="dashboard-data__current">32hrs</span>
+                        <span class="dashboard-data__previous">Last Week - 30hrs</span>
+                    </main>
+                </section>
+            </div>
+
+            <div class="dashboard__social db">
+                <section class="dashboard-data" id="social">
+                    <header>
+                        <span>Social</span>
+                        <button><img src="images/icon-ellipsis.svg" alt="icon-ellipsis" /></button>
+                    </header>
+                    <main>
+                        <span class="dashboard-data__current">32hrs</span>
+                        <span class="dashboard-data__previous">Last Week - 30hrs</span>
+                    </main>
+                </section>
+            </div>
+
+            <div class="dashboard__self-care db">
+                <section class="dashboard-data" id="selfCare">
+                    <header>
+                        <span>Self Care</span>
+                        <button><img src="images/icon-ellipsis.svg" alt="icon-ellipsis" /></button>
+                    </header>
+                    <main>
+                        <span class="dashboard-data__current">32hrs</span>
+                        <span class="dashboard-data__previous">Last Week - 30hrs</span>
+                    </main>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

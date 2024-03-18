@@ -1,0 +1,354 @@
+/*
+=============== 
+Google Fonts
+===============
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/*
+=============== 
+variables 
+===============
+*/
+
+:root {
+    --clr-primary-blue: hsl(246, 80%, 60%);
+    --clr-primary-work: hsl(15, 100%, 70%);
+    --clr-primary-play: hsl(195, 74%, 62%);
+    --clr-primary-study: hsl(348, 100%, 68%);
+    --clr-primary-exercise: hsl(145, 58%, 55%);
+    --clr-primary-social: hsl(264, 64%, 52%);
+    --clr-primary-selfCare: hsl(43, 84%, 65%);
+
+    --clr-neutral-300: hsl(236, 100%, 87%);
+    --clr-neutral-400: hsl(235, 45%, 61%);
+    --clr-neutral-700: hsl(235, 46%, 20%);
+    --clr-neutral-900: hsl(226, 43%, 10%);
+
+    --transition: all 0.2s linear;
+}
+
+/*
+=============== 
+css reset
+===============
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    /* height: auto; */
+    user-select: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    font-family: inherit;
+    color: inherit;
+    text-decoration: none;
+    transition: all 250ms;
+}
+
+a:is(:focus, :hover),
+.nav__links button:is(:focus, :hover) {
+    color: var(--clr-neutral-900);
+}
+
+button {
+    background: transparent;
+    border: 0;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+    transition: all 250ms;
+    cursor: pointer;
+}
+
+/* an experiment, but it is better to do it with an active class and js */
+button:focus {
+    outline: none;
+}
+
+/*
+=============== 
+CSS
+===============
+*/
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: white;
+    background-color: var(--clr-neutral-900);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 1rem;
+}
+
+.dashboard {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 85vw;
+    max-width: 350px;
+}
+
+/*
+=============== 
+    Dashboard main
+===============
+*/
+
+.dashboard__main {
+    background-color: var(--clr-neutral-700);
+    border-radius: 1rem;
+}
+
+.dashboard__main__header {
+    background-color: var(--clr-primary-blue);
+    display: flex;
+
+    padding: 1.75rem 1.5rem;
+    border-radius: 1rem;
+}
+
+.avatar-img {
+    max-width: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.small-text {
+    font-size: 0.9rem;
+    color: var(--clr-neutral-300);
+}
+
+.dashboard__main__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem 1.75rem;
+    color: var(--clr-neutral-300);
+}
+
+.btn:is(:hover, :focus) {
+    color: white;
+}
+
+/*
+============================== 
+    Data Dashboards
+==============================
+*/
+
+/* container */
+.db {
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.2rem;
+    /* overflow: hidden; */
+}
+
+/* Data Dashboards */
+.dashboard-data {
+    margin-top: auto;
+    background-color: var(--clr-neutral-700);
+    padding: 1.25rem;
+    border-radius: 1rem;
+}
+
+.dashboard-data:is(:hover, :focus) {
+    background-color: rgba(28, 31, 74, 0.9);
+    cursor: pointer;
+}
+
+.dashboard-data header,
+.dashboard-data main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-data header {
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-data__current {
+    font-size: 1.8rem;
+}
+
+.dashboard-data__previous {
+    /* margin-left: auto; */
+    text-align: right;
+    color: var(--clr-neutral-300);
+    font-size: 0.9rem;
+}
+
+/*
+============================================= 
+    Data Dashboards Backgrounds % icon positions
+=============================================
+*/
+
+.db {
+    background-repeat: no-repeat;
+    background-position: 93% -15%;
+}
+
+.dashboard__work {
+    background-color: var(--clr-primary-work);
+    background-image: url(images/icon-work.svg);
+}
+.dashboard__play {
+    background-color: var(--clr-primary-play);
+    background-image: url(images/icon-play.svg);
+}
+.dashboard__study {
+    background-color: var(--clr-primary-study);
+    background-image: url(images/icon-study.svg);
+}
+.dashboard__exercise {
+    background-color: var(--clr-primary-exercise);
+    background-image: url(images/icon-exercise.svg);
+    background-position: 93% 0%; /* special case to pixel perfect match the design */
+}
+.dashboard__social {
+    background-color: var(--clr-primary-social);
+    background-image: url(images/icon-social.svg);
+    background-position: 93% -40%; /* special case to pixel perfect match the design */
+}
+.dashboard__self-care {
+    background-color: var(--clr-primary-selfCare);
+    background-image: url(images/icon-self-care.svg);
+}
+
+/*
+============================================================ 
+    Media Query
+============================================================
+*/
+
+@media (min-width: 900px) {
+    .body {
+        display: grid;
+        place-content: center;
+    }
+    /*
+    =============== 
+        Grid organization
+    ===============
+    */
+    .dashboard {
+        max-width: 985px;
+        display: grid;
+        gap: 35px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-auto-rows: 1fr 1fr;
+        grid-template-areas:
+            "main  work      play    study"
+            "main  exercise  social  self-care";
+    }
+
+    .dashboard__main {
+        grid-area: main;
+    }
+    .dashboard__work {
+        grid-area: work;
+    }
+    .dashboard__play {
+        grid-area: play;
+    }
+    .dashboard__study {
+        grid-area: study;
+    }
+    .dashboard__exercise {
+        grid-area: exercise;
+    }
+    .dashboard__social {
+        grid-area: social;
+    }
+    .dashboard__self-care {
+        grid-area: self-care;
+    }
+
+    /*
+    ============================== 
+        components layout in the grid
+    ==============================
+    */
+
+    /* Main Cell */
+    .dashboard__main {
+        width: 220px;
+    }
+
+    .dashboard__main__header {
+        flex-direction: column;
+        padding-bottom: 4rem;
+        height: 70%;
+    }
+
+    .avatar-img {
+        max-width: 70px;
+        margin-bottom: 1.75rem;
+    }
+
+    .user-name {
+        font-size: 2rem;
+    }
+
+    .dashboard__main__buttons {
+        height: 30%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    /* Data Cells */
+
+    .db {
+        height: 220px;
+        width: 220px;
+        background-position: 90% 0%;
+    }
+
+    .dashboard-data {
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .dashboard-data head {
+        margin-bottom: 1rem;
+    }
+
+    .dashboard-data main {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .dashboard-data__current {
+        font-size: 3rem;
+    }
+}
