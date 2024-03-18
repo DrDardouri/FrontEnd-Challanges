@@ -1,9 +1,13 @@
 # Frontend Mentor - Time tracking dashboard
 
+live site: https://time-tracking-dashboard-drdardouri.netlify.app/
+
 En: The challenge is to build out this dashboard and get it looking as close to the design as possible.
 
 Ru: Задача состоит в том, чтобы создать эту панель мониторинга и сделать так, чтобы она выглядела как можно ближе к дизайну.
+
 Fr: Le défi est de créer ce tableau de bord et de le rendre aussi proche que possible du design.
+
 De: Die Herausforderung besteht darin, dieses Dashboard so zu gestalten, dass es dem Design so nahe wie möglich kommt.
 
 ![Design preview for the Time tracking dashboard coding challenge](./design/desktop-preview.jpg)
