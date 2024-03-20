@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="author" content="Dr. Dardouri" />
+        <meta name="description" content="Frontend Mentor Challange: Tip calculator" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <title>Frontend Mentor | Tip calculator app</title>
+        <script defer src="script.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    </head>
+    <body>
+        <h1 class="app-title">SPLI<br />TTER</h1>
+        <main role="main" class="app">
+            <form action="" class="app__input">
+                <div>
+                    <div class="input-control">
+                        <label for="bill">Bill</label>
+                        <p class="error-msg">Can't be zero</p>
+                    </div>
+                    <input type="number" name="bill" id="bill" class="bill-amount" />
+                </div>
+
+                <div>
+                    <label for="percent">Select Tip %</label>
+                    <div class="tip-percent-input">
+                        <button class="input-btn" data-tip="0.05">5%</button>
+                        <button class="input-btn" data-tip="0.10">10%</button>
+                        <button class="input-btn" data-tip="0.15">15%</button>
+                        <button class="input-btn" data-tip="0.25">25%</button>
+                        <button class="input-btn" data-tip="0.50">50%</button>
+                        <input type="number" placeholder="Custom" min="1" max="100" id="custom-input" />
+                    </div>
+                </div>
+                <div>
+                    <div class="input-control">
+                        <label for="number-of-people" class="pseudo">Number of People</label>
+                        <p class="error-msg">Can't be zero</p>
+                    </div>
+                    <input type="number" name="number-of-people" id="number-of-people" class="number-of-people input-control" />
+                </div>
+            </form>
+            <section class="app__output">
+                <div>
+                    <p>Tip Amount <span>/ person</span></p>
+                    <span class="output" id="tip-amount">$0.00</span>
+                </div>
+                <div>
+                    <p>Total <span>/ person</span></p>
+                    <span class="output" id="total">$0.00</span>
+                </div>
+                <button class="reset-btn">Reset</button>
+            </section>
+        </main>
+    </body>
+</html>
